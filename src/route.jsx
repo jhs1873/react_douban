@@ -1,5 +1,5 @@
 import React, {Component} from 'react'
-class Route extends Component {
+class RouteIndex extends Component {
   render () {
     return <div>
       {this.props.children}
@@ -7,4 +7,4 @@ class Route extends Component {
   }
 }
 
-module.exports = Route
+module.exports = RouteIndex

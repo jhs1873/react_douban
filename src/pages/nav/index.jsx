@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { Link } from 'react-router'
-import '../style.css'
+require('../style.css')
 
 class Index extends Component {
   constructor (props) {
@@ -22,17 +22,18 @@ class Index extends Component {
           txt: '音乐',
           query: '2'
         }
-      ]
+      ],
+      activeIndex: 0
     }
   }
   tabindex (index) {
     this.props.tabIndex(index)
+    this.setState({
+      activeIndex: index
+    })
   }
   render () {
-    let activeIndex = 0
-    if (location.pathname !== '/') {
-      activeIndex = -1
-    }
+    let activeIndex = this.state.activeIndex
     let navList = this.state.navList
     return <div>
       <div className='nav'>

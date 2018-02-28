@@ -1,12 +1,11 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
-import {Router, Route, browserHistory, IndexRoute} from 'react-router'
-import routeIndex from './route'
+import {Router, Route, IndexRoute, hashHistory} from 'react-router'
+import RouteIndex from './route'
 import Rindex from './pages/index'
-
 ReactDOM.render(
-  <Router history={browserHistory}>
-    <Route path='/' component={routeIndex}>
+  <Router history={hashHistory}>
+    <Route path='/' component={RouteIndex}>
       <IndexRoute component={Rindex} />
       <Route path='/book' component={Rindex} />
       <Route path='/movie' component={Rindex} />

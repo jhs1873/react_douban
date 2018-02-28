@@ -255,7 +255,7 @@ class Rindex extends Component {
     if (!this.state.detail) {
       var nav = <Nav tabIndex={this.tabIndex.bind(this)} />
     }
-    return (<div>
+    return <div>
       {search}
       <div className='content' ref='content'>
         {list}
@@ -267,7 +267,6 @@ class Rindex extends Component {
       {detail}
       {nav}
     </div>
-    )
   }
 }
 
