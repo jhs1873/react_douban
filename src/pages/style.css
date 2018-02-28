@@ -1,0 +1,99 @@
+/* 底部导航 */
+.nav{position :fixed; bottom :0; left :0; right :0; width :100%; height :49px; z-index :99; }
+.nav::before{content :''; position :absolute; top :0; left :0; right :0; width :100%; height :1px; background :#ccc; transform-origin :0 0; transform :scaleY(.5); }
+.nav-ul{display :flex; width :100%; height :100%; background :#fff; justify-content :center; align-items :center; }
+.nav-ul li{width :0; flex :1; }
+.nav-ul li a{display :block; text-align :center; }
+
+.nav-ul li a span{display :block; color :#707070; font-size :12px; }
+.nav-ul li a i{display :block; width :24px; height :24px; margin :0 auto; }
+.nav-ul li:nth-child(1) a i{background :url(../images/icons/book.png) no-repeat top center; background-size :100%; }
+.nav-ul li:nth-child(2) a i{background :url(../images/icons/movie.png) no-repeat top center; background-size :100%; }
+.nav-ul li:nth-child(3) a i{background :url(../images/icons/music.png) no-repeat top center; background-size :100%; }
+
+
+.nav-ul li:nth-child(1) a.active i{background :url(../images/icons/book-active.png) no-repeat top center; background-size :100%; }
+.nav-ul li:nth-child(2) a.active i{background :url(../images/icons/movie-active.png) no-repeat top center; background-size :100%; }
+.nav-ul li:nth-child(3) a.active i{background :url(../images/icons/music-active.png) no-repeat top center; background-size :100%; }
+
+.nav-ul li a.active span{color :#1296db; }
+.nav-ul li a{color :#222; text-decoration :none; background :transparent; }
+.nav-ul,.nav-ul ol{list-style :none; margin :0; padding :0; }
+
+/*图书列表*/
+/* list内容与input和nav距离 */
+.content{margin-top :40px; height :87vh; overflow :auto; }
+.content::-webkit-scrollbar{display :none; }
+.listctx{line-height :8px; margin-top :20px; display :flex; border :1px solid #999; white-space :nowrap; overflow :hidden; }
+.listctx .listImg{height :120px; width :90px; margin :10px; border :1px solid #fff; }
+.listctx img{background-size :100% 100%; height :100%; width :100%; }
+.listctx .info{width :50%; }
+.listctx .info .tags{margin-right :5px; background-color :#D89A15; color :white; font-style :bold; padding :2px; font-size :12px; }
+.listctx .info p span{padding-left :5px; }
+.listctx .info .tag{height :10px; }
+
+/*图书详情*/
+.bookDetail{position :absolute; left :0; top :0; z-index :10; width :100vw; min-height :100vh; background :white; overflow :auto; }
+.bookDetail .head{color :white; background-color :#3CA1FF; height :40px; position :fixed; top :0; left :0; width :100%; z-index :11; }
+.bookDetail .head div:first-child{text-align :center; line-height :40px; }
+.bookDetail .head div:last-child{position :absolute; top :10px; left :10px; color :white; }
+.bookDetail .head .icon{width :15px; height :15px; }
+.bookContext{margin :50px 10px 50px; }
+.header{display :flex; border-bottom :1px solid #CAB9B9; }
+.header img{height :180px; width :120px; margin-top :10px; }
+.header .info{line-height :10px; font-size :16px; margin-left :5px; white-space :nowrap; overflow :hidden; }
+.header .info .tags{margin-right :5px; background-color :#D89A15; color :white; font-style :bold; padding :2px; font-size :12px; }
+
+.bookDetail .cata p{text-indent :1em; }
+.bookDetail .j p{text-indent :1em; }
+
+/* 电影列表 */
+.movieList{margin-top :20px; display :flex; border :1px solid #ccc; }
+.movieList .img img{background-size :100% 100%; height :120px; width :90px; margin :10px; }
+.movieList .title{line-height :10px; overflow :hidden; white-space :nowrap; }
+.movieList .title .tag{margin-right :5px; background-color :red; color :white; font-style :bold; padding :2px; font-size :12px; }
+.movieList .title p:first-child{font-weight :bold; }
+.movieList .title p:nth-of-type(3) span{color :#999; margin-right :5px; }
+/* 电影详情 */
+.detailTop{position :absolute; left :0; top :0; z-index :10; width :100vw; min-height :100vh; background :white; overflow :auto; }
+.detailTop .head{color :white; background-color :#3CA1FF; height :40px; position :fixed; top :0; left :0; width :100%; z-index :11; }
+.detailTop .head div:first-child{text-align :center; line-height :40px; }
+.detailTop .head div:last-child{position :absolute; top :10px; left :10px; color :white; }
+.detailTop .head .icon{width :15px; height :15px; }
+.poster{margin :60px 0 10px; width :90vw; margin-left :5vw; }
+
+.summary{border-top :1px solid #ccc; color :#333; width :90vw; margin-left :5vw; }
+.summary .filmName span:first-child{margin-right :10px; }
+.genres{font-size :12px; margin-right :5px; background-color :red; padding :2px; color :white; }
+
+.casts{width :90vw; margin-left :5vw; padding-bottom :50px; }
+
+.casts .avators{display :flex; flex-direction :row; flex-wrap :wrap; justify-content :flex-start; }
+
+.casts .avatars .avatar{width :25vw; height :25vw; border-radius :50%/50%; margin :10px 0; margin-right :7.5vw; }
+
+.casts .avatars .avatar:nth-child(3n){margin-right :0; }
+/* 音乐列表 */
+.musicList{line-height :8px; margin-top:20px; display :flex; border :1px solid #999; white-space :nowrap; overflow :hidden; }
+.musicList img{background-size :100% 100%; height :120px; width :90px; margin :10px; }
+.musicList .info span{margin-left :5px; }
+/* 音乐详情 */
+.musicDetail{position :absolute; left :0; top :0; z-index :10; width :100vw; min-height :100vh; background :white;
+    /* overflow: auto; */
+    overflow :hidden; }
+.musicDetail .head{color :white; background-color :#3CA1FF; height :40px; position :fixed; top :0; left :0; width :100%; z-index :11; }
+.musicDetail .head div:first-child{text-align :center; line-height :40px; margin :0 100px; overflow :hidden; text-overflow :ellipsis; white-space :nowrap; }
+.musicDetail .head div:last-child{position :absolute; top :10px; left :10px; color :white; }
+.musicDetail .head .icon{width :15px; height :15px; }
+.musicContext{margin :50px 10px 50px; }
+.header{display :flex; border-bottom :1px solid #CAB9B9; }
+.header img{height :180px; width :120px; margin-top :10px; }
+.header .info{line-height :10px; font-size :16px; margin-left :5px; white-space :nowrap; }
+.header .info .tags{margin-right :5px; background-color :#D89A15; color :white; font-style :bold; padding :2px; font-size :12px; }
+
+.musicDetail .j p{text-indent :1em; margin :-10px 10px 0; }
+.musicDetail .tracks p{text-indent :1em; margin :-10px 10px 0; }
+
+/*加载更多*/
+.more{text-align: center;margin:20px 0;}
+
